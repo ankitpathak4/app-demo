@@ -1,0 +1,10 @@
+<ng-container>
+    <h1>Student Requests</h1>
+
+    <ul class="list-group">
+        <li *ngFor="let r of requests" class="list-group-item">
+            <a href="#">{{r.requestedBy}}</a> requested for
+            <a href="#">{{r.requestedFor}}</a> course structure
+        </li>
+    </ul>
+</ng-container>

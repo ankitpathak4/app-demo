@@ -1,0 +1,31 @@
+<h1>Students Progress</h1>
+
+<ul class="list-group">
+    <li *ngFor="let s of students" class="list-group-item">
+        <div class="row">
+            <div class="col-md-3" style="padding-top: 15px;">{{ s.name}}</div>
+            <div class="col-md-9" style="padding: 5px;">
+                <span style="margin-left: 15%; color: palevioletred;">Progress</span>
+                <div class="progress" style="margin: 3px; width: 65%; height: 15px; float: right;">
+                    <div 
+                        class="progress-bar bg-success" 
+                        role="progressbar" 
+                        [style.width]="s.progress" 
+                        aria-valuemin="0" 
+                        aria-valuemax="100">
+                    </div>
+                </div>
+                <span style="margin-left: 37%; color: palevioletred;">Performance</span>
+                <div class="progress" style="margin: 3px; width: 35%; height:15px; float: right;">
+                    <div 
+                        class="progress-bar bg-info" 
+                        role="progressbar" 
+                        [style.width]="s.performance"
+                        aria-valuemin="0" 
+                        aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

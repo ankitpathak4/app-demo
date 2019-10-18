@@ -1,0 +1,10 @@
+<ng-container *ngIf="requests">
+    <h1>Time Requests</h1>
+
+    <ul class="list-group">
+        <li *ngFor="let r of requests" class="list-group-item">
+            <a href="#">{{r.requestedBy}}</a> wanted to make a <a href="#">{{r.requestedFor}}</a>
+            with <a href="#">{{r.requestedTo}}</a> at {{r.requestedTime}}
+        </li>
+    </ul>
+</ng-container>
